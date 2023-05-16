@@ -9,3 +9,86 @@ body {
     background-color: #202124;
     color: white;
 }
+
+input, textarea {
+    padding: 12px;
+    margin: 12px 0;
+    font-family: 'Inter', sans-serif;
+    background-color: transparent;
+    color: white;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+}
+
+input::placeholder, textarea::placeholder {
+    color: #aaa;
+    font-weight: bold;
+}
+
+.todo-app__header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 16px;
+    border-bottom: 3px solid white;
+    background-color: cyan;
+    color: #202124;
+}
+
+.todo-app__header h1 {
+    margin: 8px 0;
+    flex: 1;
+}
+
+
+.todo-app__body {
+    max-width: 1000px;
+    margin: 16px auto;
+    padding: 12px;
+}
+
+.todo-app__body h2 {
+    font-weight: normal;
+    margin: 16px 0;
+}
+
+.todo-input {
+    margin: 0 auto;
+    max-width: 500px;
+    margin-bottom: 48px;
+}
+
+.todo-input input, .todo-input textarea {
+    display: block;
+    width: 100%;
+}
+
+.todo-input__title {
+    font-weight: bold;
+    font-size: 24px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.todo-input__desc-limit {
+    font-size: 14px;
+    text-align: right;
+    color: #aaa;
+}
+
+.todo-input__body {
+    min-height: 175px;  
+}
+
+.todo-input button {
+    display: block;
+    width: 100%;
+    padding: 8px;
+    background-color: transparent;
+    font-family: 'Inter', sans-serif;
+    color: white;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+}
