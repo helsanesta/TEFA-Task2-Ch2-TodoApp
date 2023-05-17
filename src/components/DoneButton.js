@@ -1,8 +1,8 @@
 import React from "react";
 
-function DoneButton({ id, onClick }){
+function DoneButton({ id, onDone }){
     return (
-        <button className="todo-item__done-button" onClick={() => onClick(id)}>
+        <button className="todo-item__done-button" onClick={() => onDone(id)}>
             Selesai
         </button>
     );

@@ -6,9 +6,14 @@ class TodoInput extends React.Component {
         this.state = {
             title: "",
             description: "",
-            charlimit: 30,
+            charlimit: 50,
             dueDate: "",
         };
+
+        this.onTitleChange = this.onTitleChange.bind(this);
+        this.onDescriptionChange = this.onDescriptionChange.bind(this);
+        this.onDueDateChange = this.onDueDateChange.bind(this);
+        this.onSubmit = this.onSubmit.bind(this);
     }
 
     onTitleChange = (event) => {
@@ -23,7 +28,7 @@ class TodoInput extends React.Component {
         });
         if (event.target.value.length === this.state.charlimit) {
             window.alert(
-                "Username shouldn't exceed 50 characters"
+                "Description shouldn't exceed 50 characters"
             );
         }
     }
@@ -56,7 +61,7 @@ class TodoInput extends React.Component {
                     <textarea type="text" placeholder="Deskripsi Todo" value={this.state.description} onChange={this.onDescriptionChange}/>
                     <p className="todo-input__desc-limit">Remaining Characters = {this.state.charlimit - this.state.description.length} </p>
                     <input type="date" placeholder="Tanggal Deadline" value={this.state.dueDate} onChange={this.onDueDateChange}/>
-                    <button type="submit" disabled={this.state.description.length > this.state.charlimit ? true : false}>Add Todo</button>
+                    <button type="submit" disabled={this.state.description.length > this.state.charlimit ? true : false}>Add Todo List</button>
                 </div>
             </form>
         )
